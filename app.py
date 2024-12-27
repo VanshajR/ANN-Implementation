@@ -6,6 +6,10 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 
+st.set_page_config(
+    page_title="Customer Churn Prediction",
+    page_icon="📊"
+)
 # Load the model
 model = load_model('churn_model.h5')
 
