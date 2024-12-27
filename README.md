@@ -36,15 +36,15 @@ Customer churn prediction is crucial for businesses to retain customers and redu
 ## Project Structure
 ```bash
 .
-├── model_creation.ipynb   # Jupyter Notebook for preprocessing and training
-├── predict.ipynb          # Jupyter Notebook for testing predictions
-├── app.py                 # Streamlit app for user interaction
-├── churn_model.h5         # Trained ANN model
-├── scaler.pkl             # Saved scaler for feature scaling
-├── onehotencoder_geo.pkl  # One-hot encoder for geography
+├── model_creation.ipynb     # Jupyter Notebook for preprocessing and training
+├── predict.ipynb            # Jupyter Notebook for testing predictions
+├── app.py                   # Streamlit app for user interaction
+├── churn_model.h5           # Trained ANN model
+├── scaler.pkl               # Saved scaler for feature scaling
+├── onehotencoder_geo.pkl    # One-hot encoder for geography
 ├── label_encoder_gender.pkl # Label encoder for gender
-├── requirements.txt       # Python dependencies
-└── README.md              # Project documentation
+├── requirements.txt         # Python dependencies
+└── README.md                # Project documentation
 ```
 
 ## Setup and Installation
