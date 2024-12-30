@@ -94,7 +94,7 @@ streamlit run app.py
 
 2. Fill in customer details using the interactive form.
 
-3. View the churn prediction and probability.
+3. View the churn prediction and estimated salary with respective probabilities.
 
 ## Model Details
 - Architecture:
