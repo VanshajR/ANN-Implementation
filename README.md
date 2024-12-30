@@ -1,14 +1,20 @@
 # Customer Churn Prediction using Artificial Neural Networks (ANN)
-This project implements an Artificial Neural Network (ANN) to predict customer churn using a dataset of customer data. The implementation includes data preprocessing, model training, and deployment of a prediction app using Streamlit.
+This project implements an Artificial Neural Network (ANN) to predict customer churn using a dataset of customer data. It also does prediction of estimated salary using regression The implementation includes data preprocessing, model training, and deployment of a prediction app using Streamlit.
 Check it out here: [Streamlit](https://ann-prac-vanshajr.streamlit.app)
 ## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Setup and Installation](#setup-and-installation)
-- [Usage](#usage)
-- [Model Details](#model-details)
-- [Results](#results)
+- [Customer Churn Prediction using Artificial Neural Networks (ANN)](#customer-churn-prediction-using-artificial-neural-networks-ann)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Features](#features)
+  - [Project Structure](#project-structure)
+  - [Setup and Installation](#setup-and-installation)
+  - [Usage](#usage)
+    - [Training the Model](#training-the-model)
+    - [Making Predictions](#making-predictions)
+    - [Using the Streamlit App](#using-the-streamlit-app)
+  - [Model Details](#model-details)
+  - [Results](#results)
+  - [Additional Comments](#additional-comments)
 
 ## Overview
 Customer churn prediction is crucial for businesses to retain customers and reduce revenue loss. This project trains an ANN model on customer data to predict whether a customer is likely to leave (churn). The application includes:
@@ -36,15 +42,21 @@ Customer churn prediction is crucial for businesses to retain customers and redu
 ## Project Structure
 ```bash
 .
-├── model_creation.ipynb     # Jupyter Notebook for preprocessing and training
-├── predict.ipynb            # Jupyter Notebook for testing predictions
-├── app.py                   # Streamlit app for user interaction
-├── churn_model.h5           # Trained ANN model
-├── scaler.pkl               # Saved scaler for feature scaling
-├── onehotencoder_geo.pkl    # One-hot encoder for geography
-├── label_encoder_gender.pkl # Label encoder for gender
-├── requirements.txt         # Python dependencies
-└── README.md                # Project documentation
+├── salary_regression.ipynb      # Preprocessing and training regression model
+├── model_creation.ipynb         # Preprocessing and training classification model
+├── predict.ipynb                # Notebook for testing predictions (classification)
+├── app.py                       # Streamlit app for user interaction
+├── churn_model.h5               # Trained ANN model for classification
+├── regression_model.h5          # Trained ANN model for regression
+├── scaler.pkl                   # Saved scaler for feature scaling (classification)
+├── scaler_reg.pkl               # Saved scaler for feature scaling (regression)
+├── onehotencoder_geo.pkl        # One-hot encoder for geography (classification)
+├── onehotencoder_geo_reg.pkl    # One-hot encoder for geography (regression)
+├── label_encoder_gender.pkl     # Label encoder for gender (classification)
+├── label_encoder_gender_reg.pkl # Label encoder for gender (regression)
+├── requirements.txt             # Python dependencies
+└── README.md                    # Project documentation
+
 ```
 
 ## Setup and Installation
@@ -66,7 +78,7 @@ streamlit run app.py
 
 ## Usage
 ### Training the Model
-1. Open `model_creation.ipynb` in Jupyter Notebook.
+1. Open `model_creation.ipynb` and `salary_regression.ipynb` in Jupyter Notebook.
 
 2. Run the notebook cells sequentially to preprocess data, train the ANN, and save the model and encoders.
 
@@ -95,7 +107,7 @@ streamlit run app.py
 - Compilation:
 
   - Optimizer: Adam with a learning rate of 0.01.
-  - Loss function: Binary Crossentropy.
+  - Loss function: Binary Crossentropy for Classification, Mean Average Score for Regression.
 
 - Training:
 
