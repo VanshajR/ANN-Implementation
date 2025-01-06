@@ -1,6 +1,8 @@
 # Customer Churn Prediction using Artificial Neural Networks (ANN)
 This project implements an Artificial Neural Network (ANN) to predict customer churn using a dataset of customer data. It also does prediction of estimated salary using regression The implementation includes data preprocessing, model training, and deployment of a prediction app using Streamlit.
-Check it out here: [Streamlit](https://ann-prac-vanshajr.streamlit.app)
+Check it out here: 
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ann-prac-vanshajr.streamlit.app)
 ## Table of Contents
 - [Customer Churn Prediction using Artificial Neural Networks (ANN)](#customer-churn-prediction-using-artificial-neural-networks-ann)
   - [Table of Contents](#table-of-contents)
