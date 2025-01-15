@@ -64,7 +64,7 @@ Customer churn prediction is crucial for businesses to retain customers and redu
 ## Setup and Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/VanshajR/ANN-Implementation
+git clone https://github.com/VanshajR/ANN-Implementation.git
 cd ANN-Implementation
 ```
 
